@@ -39,14 +39,30 @@ export default function HeroSearchForm() {
 
   const handleSubmitForm = (e) => {
     e.preventDefault();
-    setFilter("make", selectedMake);
-    setFilter("model", selectedModel);
-    setFilter("bodyTypes", [selectedBodyType.label]);
-    setFilter("location", selectedLocation);
-    setFilter("yearFrom", selectedYearFrom.value);
-    setFilter("yearTo", selectedYearTo.value);
-    setFilter("minPrice", minPrice);
-    setFilter("maxPrice", maxPrice);
+    if (selectedMake) {
+      setFilter("make", selectedMake);
+    }
+    if (selectedBodyType) {
+      setFilter("bodyTypes", [selectedBodyType.label]);
+    }
+    if (selectedModel) {
+      setFilter("make", selectedModel);
+    }
+    if (selectedLocation) {
+      setFilter("make", selectedLocation);
+    }
+    if (selectedYearFrom) {
+      setFilter("yearFrom", selectedYearFrom.value);
+    }
+    if (selectedYearTo) {
+      setFilter("yearTo", selectedYearTo.value);
+    }
+    if (minPrice) {
+      setFilter("minPrice", minPrice);
+    }
+    if (maxPrice) {
+      setFilter("maxPrice", maxPrice);
+    }
 
     navigate("/find");
   };
