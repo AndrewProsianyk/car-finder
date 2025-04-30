@@ -5,7 +5,6 @@ import Container from "../../components/container/Container";
 import styles from "./CarPage.module.scss";
 import ShareButton from "../../components/shareButton/ShareButton";
 import FavoriteButton from "../../components/favoriteButton/FavoriteButton";
-import CarInfoBlock from "../../components/CarInfoBlock/CarInfoBlock";
 import RecommendedCarsList from "../../components/recommendedCarsList/RecommendedCarsList";
 import SideInfoBlock from "../../components/sideInfoBlock/SideInfoBlock";
 import {
@@ -14,6 +13,7 @@ import {
   useChosenCar,
 } from "../../stores/carStore";
 import { useEffect } from "react";
+import CarInfoBlock from "../../components/CarInfoBlock/CarInfoBlock";
 
 export default function CarPage() {
   const { id } = useParams();
