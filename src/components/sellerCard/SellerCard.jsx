@@ -17,7 +17,7 @@ export default function SellerCard() {
       >
         <div className={styles.sellerPhoto}>
           <img
-            src="/public/images/avatar.png"
+            src="/images/avatar.png"
             alt="Seller"
             width={"100%"}
             height={"100%"}
