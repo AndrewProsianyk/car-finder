@@ -9,7 +9,7 @@ export default function Breadcrumbs() {
   const location = useLocation();
 
   const generateBreadcrumbs = () => {
-    const pathnames = location.pathname.split("/").filter(Boolean); // ['car', '123']
+    const pathnames = location.pathname.split("/").filter(Boolean);
     const breadcrumbs = [];
 
     pathnames.forEach((_, index) => {

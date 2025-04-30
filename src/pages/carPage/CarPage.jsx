@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
-import Breadcrumbs from "../../components/breadCrumbs/BreadCrumbs";
+import Breadcrumbs from "../../components/breadCrumbs/Breadcrumbs";
+
 import Container from "../../components/container/Container";
 import styles from "./CarPage.module.scss";
 import ShareButton from "../../components/shareButton/ShareButton";

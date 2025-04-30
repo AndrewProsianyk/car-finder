@@ -12,6 +12,7 @@ import yearsList from "../../lib/yearsList";
 import locationsList from "../../lib/locationsList";
 import carData from "../../lib/carData";
 import { useSearchStore } from "../../stores/searchStore";
+import bodyTypeData from "../../lib/bodyTypeData";
 
 export default function HeroSearchForm() {
   const [selectedPill, setSelectedPill] = useState("all");
@@ -72,7 +73,7 @@ export default function HeroSearchForm() {
           />
           <InputSelect
             placeholder="Body type"
-            options={bodyTypeOptions}
+            options={bodyTypeData}
             value={selectedBodyType}
             onChange={setSelectedBodyType}
           />
