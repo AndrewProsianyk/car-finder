@@ -13,7 +13,7 @@ import {
   useChosenCar,
 } from "../../stores/carStore";
 import { useEffect } from "react";
-import CarInfoBlock from "../../components/CarInfoBlock/CarInfoBlock";
+import CarInfoBlock from "../../components/carInfoBlock/CarInfoBlock";
 
 export default function CarPage() {
   const { id } = useParams();
