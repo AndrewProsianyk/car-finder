@@ -1,7 +1,8 @@
 import React, { useEffect, useMemo, useState } from "react";
 import styles from "./FindCarPage.module.scss";
 import Container from "../../components/container/Container";
-import Breadcrumbs from "../../components/breadCrumbs/BreadCrumbs";
+
+import Breadcrumbs from "../../components/breadCrumbs/Breadcrumbs";
 import ActiveFilterList from "../../components/findCarPage/activeFilterList/ActiveFilterList";
 import CarFilterBlock from "../../components/findCarPage/carFilterBlock/CarFilterBlock";
 import FilteredCarList from "../../components/findCarPage/filteredCarList/FilteredCarList";
