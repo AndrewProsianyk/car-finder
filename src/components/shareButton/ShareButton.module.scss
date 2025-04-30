@@ -1,0 +1,14 @@
+.shareButtoon {
+  width: 40px;
+  height: 40px;
+
+  background-color: transparent;
+  border: none;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+}

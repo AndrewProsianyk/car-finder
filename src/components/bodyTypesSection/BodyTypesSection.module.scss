@@ -1,0 +1,8 @@
+@use "../../styles/variables" as *;
+
+.bodyTypesSection {
+  padding-top: 56px;
+  @media (min-width: 768px) {
+    padding-top: 112px;
+  }
+}

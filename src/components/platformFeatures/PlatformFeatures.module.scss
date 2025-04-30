@@ -1,0 +1,21 @@
+@use "../../styles/variables" as *;
+
+.featuresList {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.listItem {
+  display: flex;
+  flex-direction: column;
+  //   justify-content: space-between;
+  gap: 16px;
+
+  padding: 32px 24px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 196px;
+
+  background-color: #ecf2f2;
+}

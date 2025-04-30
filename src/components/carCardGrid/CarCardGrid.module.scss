@@ -1,0 +1,49 @@
+.carGrid {
+  display: grid;
+  grid-template-columns: 526px 1fr;
+  grid-template-rows: 234px 234px;
+  gap: 24px;
+  grid-template-areas:
+    "bigCard topCard"
+    "bigCard bottomCard";
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+      "bigCard"
+      "topCard"
+      "bottomCard";
+  }
+}
+
+.bigCard {
+  grid-area: bigCard;
+
+  width: 100%;
+  height: auto;
+
+  //   @media (max-width: 768px) {
+  //     width: 343px;
+  //     height: 430px;
+  //   }
+}
+
+.smallCard {
+  &.top {
+    grid-area: topCard;
+    width: 100%;
+    height: auto;
+  }
+
+  &.bottom {
+    grid-area: bottomCard;
+    width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 768px) {
+    // width: 343px;
+    // height: 430px;
+  }
+}

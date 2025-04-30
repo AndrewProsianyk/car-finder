@@ -1,0 +1,98 @@
+@use "../../styles/variables" as *;
+
+.wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.inputSelect {
+  width: 100%;
+  padding: 10px 16px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  background-color: white;
+  color: $gray-900;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid gray;
+
+  border-radius: 8px;
+  transition: border-color 0.2s ease;
+
+  &.active {
+    border-color: $gray-900;
+  }
+
+  &.disabled {
+    background: #f5f5f5;
+    cursor: not-allowed;
+    color: #a0a0a0;
+  }
+
+  &.shortLeft {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: none;
+  }
+  &.shortRight {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+.placeholder {
+  color: $gray-400;
+}
+
+.icon {
+  flex-shrink: 0;
+  margin-left: 8px;
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 1px solid gray;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  z-index: 5;
+  padding: 14px;
+  list-style: none;
+
+  max-height: 200px; // або будь-яке інше значення
+  overflow-y: auto;
+  // необов'язково, але красиво:
+  //   scrollbar-width: thin;
+  //   scrollbar-color: #ccc transparent;
+
+  // для WebKit (Chrome, Safari)
+  //   &::-webkit-scrollbar {
+  //     width: 6px;
+  //   }
+
+  //   &::-webkit-scrollbar-thumb {
+  //     background-color: #ccc;
+  //     border-radius: 4px;
+  //   }
+}
+
+.option {
+  padding: 10px 16px;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+  color: $gray-700;
+  border-radius: 8px;
+  text-align: start;
+
+  &:hover {
+    background-color: #f3f4f6;
+    color: $gray-900;
+  }
+}

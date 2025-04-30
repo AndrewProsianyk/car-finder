@@ -1,0 +1,16 @@
+@use "../../styles/variables" as *;
+
+.section {
+  padding-bottom: 56px;
+
+  @media (min-width: 768px) {
+    padding-bottom: 112px;
+  }
+}
+
+.sectionTopContent {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1298px;
+  margin-bottom: 32px;
+}

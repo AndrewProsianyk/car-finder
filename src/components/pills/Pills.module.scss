@@ -1,0 +1,43 @@
+@use "../../styles/variables" as *;
+
+.pillsWrap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+
+  @media (min-width: 800px) {
+    gap: 16px;
+    justify-content: start;
+  }
+}
+
+.pill {
+  display: inline-flex;
+  padding: 9px 19px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+
+  background-color: transparent;
+  &.form {
+    color: #fff;
+  }
+
+  &.pageLight {
+    color: $gray-900;
+  }
+
+  &.active {
+    color: $gray-900;
+    background-color: #fff;
+
+    &.pageLight {
+      background-color: $gray-50;
+      border-color: $gray-900;
+      color: $gray-900;
+    }
+  }
+}

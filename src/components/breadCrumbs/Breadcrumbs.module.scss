@@ -1,0 +1,15 @@
+@use "../../styles/variables" as *;
+
+.crumb {
+  color: $gray-700;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  &.active {
+    color: $gray-400;
+  }
+}

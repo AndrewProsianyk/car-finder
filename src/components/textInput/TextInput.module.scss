@@ -1,0 +1,56 @@
+@use "../../styles/variables" as *;
+
+.wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.textInput {
+  width: 100%;
+  padding: 10px 16px 10px 42px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  background-color: white;
+  color: $gray-900;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid gray;
+
+  border-radius: 8px;
+  transition: border-color 0.2s ease;
+
+  &.active {
+    border-color: $gray-900;
+  }
+
+  &.disabled {
+    background: #f5f5f5;
+    cursor: not-allowed;
+    color: #a0a0a0;
+  }
+
+  &::placeholder {
+    color: $gray-400;
+  }
+
+  &.shortLeft {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: none;
+  }
+  &.shortRight {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+.inputIcon {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}

@@ -1,0 +1,33 @@
+.header {
+  background-color: #fff;
+  padding: 12px 0px;
+  position: relative;
+}
+
+.headerContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.themeToggleBtn {
+  background-color: inherit;
+  border: none;
+}
+.headerTools > *:not(:last-child) {
+  margin-right: 20px;
+}
+.burgerToggleBtn {
+  display: flex;
+  gap: 15px;
+  background-color: inherit;
+  border: none;
+  justify-content: center;
+  align-items: center;
+}
+.burgerLogo {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+}

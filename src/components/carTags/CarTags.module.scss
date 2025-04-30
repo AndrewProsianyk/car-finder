@@ -1,0 +1,30 @@
+@use "../../styles/variables" as *;
+
+.tagsWrap {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+
+  margin-bottom: 12px;
+}
+
+.tagItem {
+  display: flex;
+  align-items: center;
+  padding: 2px 8px;
+  gap: 4px;
+
+  color: #fff;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+
+  border-radius: 4px;
+
+  &.condition {
+    background-color: $system-warning-color;
+  }
+  &.verification {
+    background-color: $system-info-color;
+  }
+}

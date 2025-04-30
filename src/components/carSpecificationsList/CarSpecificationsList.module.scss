@@ -1,0 +1,19 @@
+@use "../../styles/variables" as *;
+
+.specList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.specListItem {
+  color: $gray-900;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+
+  & > span {
+    margin-left: 5px;
+    color: $gray-500;
+  }
+}

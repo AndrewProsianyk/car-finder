@@ -1,0 +1,15 @@
+.linksWrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 25px;
+}
+
+.iconButton a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 33px;
+  height: 32px;
+  padding: 9px;
+}

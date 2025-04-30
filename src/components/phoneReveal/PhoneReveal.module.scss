@@ -1,0 +1,18 @@
+@use "../../styles/variables" as *;
+
+.revealNumberBtn {
+  padding: 10px 25px;
+  width: 100%;
+  max-width: 200px;
+  cursor: pointer;
+
+  background-color: transparent;
+  border: 1px solid $gray-900;
+  border-radius: 8px;
+}
+.btnLabel {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: $gray-900;
+}

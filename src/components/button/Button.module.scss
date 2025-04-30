@@ -1,0 +1,63 @@
+@use "../../styles/variables" as *;
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: $primary-brend-color;
+
+  border: none;
+  border-radius: 8px;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+
+  &:hover {
+    background-color: $system-danger-color;
+  }
+}
+
+.default {
+  padding: 10px 20px;
+  gap: 6px;
+}
+
+.large {
+  padding: 12px 24px;
+  gap: 8px;
+}
+
+.secondary {
+  background-color: $gray-100;
+  padding: 10px 20px;
+
+  &:hover {
+    background-color: $gray-300;
+  }
+
+  & .label {
+    color: $gray-700;
+  }
+}
+
+.hasIconLeft,
+.hasIconRight {
+  .icon {
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+.label {
+  color: #fff;
+}
+
+// .hasIconLeft .icon:first-child {
+//   margin-right: 6px;
+// }
+
+// .hasIconRight .icon:last-child {
+//   margin-left: 6px;
+// }

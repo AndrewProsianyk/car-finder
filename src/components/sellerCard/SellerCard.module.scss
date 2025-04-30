@@ -1,0 +1,38 @@
+@use "../../styles/variables" as *;
+
+.sellerCard {
+  width: 100%;
+  padding: 32px;
+  background-color: $gray-50;
+  border-radius: 8px;
+
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.sellerPhoto {
+  width: 72px;
+  height: 72px;
+
+  border-radius: 50%;
+}
+
+.sellersName {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  margin-bottom: 4px;
+}
+
+.rate {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: $gray-900;
+}
+.reviews {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: $gray-500;
+}

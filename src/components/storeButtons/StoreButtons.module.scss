@@ -1,0 +1,20 @@
+@use "../../styles/variables" as *;
+
+.buttonsWrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.linkButton {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  background-color: $gray-700;
+  color: #fff;
+  padding: 12px 20px;
+  font-weight: 600;
+
+  margin-bottom: 24px;
+
+  border-radius: 8px;
+}

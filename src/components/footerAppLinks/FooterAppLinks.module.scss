@@ -1,0 +1,23 @@
+@use "../../styles/variables" as *;
+
+.appLinksWrap {
+  display: block;
+  width: 343px;
+}
+.title {
+  color: #fff;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+
+  margin-bottom: 8px;
+}
+
+.text {
+  color: $gray-400;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+
+  margin-bottom: 24px;
+}

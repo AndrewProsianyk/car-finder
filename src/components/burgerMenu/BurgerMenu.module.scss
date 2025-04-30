@@ -1,0 +1,26 @@
+@use "../../styles/variables" as *;
+
+.burgerToggleBtn {
+  display: flex;
+  gap: 15px;
+  background-color: inherit;
+  border: none;
+  justify-content: center;
+  align-items: center;
+}
+.burgerLogo {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: $gray-900;
+}
+
+.navMenu {
+  position: absolute;
+  left: 0;
+  bottom: -168px;
+  background-color: #fff;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  box-shadow: $shadow-light-large;
+}

@@ -1,0 +1,79 @@
+import { useEffect, useMemo, useState } from "react";
+import { useCarStore } from "../../stores/carStore";
+import CarCardList from "../carCardList/CarCardList";
+import PageSection from "../pageSection/PageSection";
+import ViewAllLink from "../viewAllLink/ViewAllLink";
+
+export default function RecommendedCarsList() {
+  const cars = useCarStore((state) => state.cars);
+  const fetchCars = useCarStore((state) => state.fetchCars);
+  const [recommendedIds, setRecommendedIds] = useState([]);
+
+  useEffect(() => {
+    const loadData = async () => {
+      if (cars.length === 0) {
+        await fetchCars();
+      }
+    };
+    loadData();
+  }, []);
+
+  useEffect(() => {
+    if (cars.length && recommendedIds.length === 0) {
+      const shuffled = [...cars].sort(() => 0.5 - Math.random());
+      const ids = shuffled.slice(0, 4).map((car) => car.id);
+      setRecommendedIds(ids);
+    }
+  }, [cars]);
+
+  const recommendedCars = useMemo(() => {
+    return recommendedIds
+      .map((id) => cars.find((car) => car.id === id))
+      .filter(Boolean); // На випадок якщо раптом якесь авто зникне
+  }, [recommendedIds, cars]);
+  // const cars = useCarStore((state) => state.cars);
+  // const fetchCars = useCarStore((state) => state.fetchCars);
+
+  // const [randomCars, setRandomCars] = useState([]);
+
+  // useEffect(() => {
+  //   const loadData = async () => {
+  //     if (cars.length === 0) {
+  //       await fetchCars();
+  //     }
+  //   };
+  //   loadData();
+  // }, []);
+
+  // useEffect(() => {
+  //   if (cars.length && randomCars.length === 0) {
+  //     const shuffled = [...cars].sort(() => 0.5 - Math.random());
+  //     setRandomCars(shuffled.slice(0, 4));
+  //   }
+  // }, [cars]);
+  // -------------------
+  // const cars = useCarStore((state) => state.cars);
+  // const fetchCars = useCarStore((state) => state.fetchCars);
+
+  // useEffect(() => {
+  //   if (cars.length === 0) {
+  //     fetchCars();
+  //   }
+  // }, []);
+
+  // const randomCars = useMemo(() => {
+  //   if (!cars.length) return [];
+  //   const shuffled = [...cars].sort(() => 0.5 - Math.random());
+  //   return shuffled.slice(0, 4);
+  // }, [cars]);
+
+  return (
+    <PageSection
+      title="You may be interested in"
+      noPadding
+      buttons={<ViewAllLink />}
+    >
+      <CarCardList data={recommendedCars} />
+    </PageSection>
+  );
+}

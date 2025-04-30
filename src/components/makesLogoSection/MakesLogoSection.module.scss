@@ -1,0 +1,13 @@
+.makesSection {
+  padding-bottom: 56px;
+
+  @media (min-width: 768px) {
+    padding-bottom: 112px;
+  }
+}
+
+.makesList {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

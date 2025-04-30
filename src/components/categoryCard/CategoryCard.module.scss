@@ -1,0 +1,27 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0px 14px;
+  width: 100%;
+  max-width: 160px;
+
+  @media (min-width: 768px) {
+    padding: 0px 40px;
+    width: 100%;
+    max-width: 212px;
+  }
+}
+
+.cardImageWrap {
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+}
+
+.categoryName {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  text-align: center;
+}

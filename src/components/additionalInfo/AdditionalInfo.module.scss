@@ -1,0 +1,18 @@
+@use "../../styles/variables" as *;
+
+.infoList {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+}
+
+.infoListItem {
+  color: $gray-500;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+
+  & span {
+    color: $gray-900;
+  }
+}

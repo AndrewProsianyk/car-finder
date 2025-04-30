@@ -1,0 +1,33 @@
+@use "../../styles/variables" as *;
+
+.basicInfoList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  &.horizontal-m {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  &.horizontal-l {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &.big {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.basicInfoListItem {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  color: $gray-600;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+}

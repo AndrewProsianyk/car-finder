@@ -1,0 +1,32 @@
+@use "../../styles/variables" as *;
+
+.carTitle {
+  color: $gray-900;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+}
+
+.titleWrap {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+
+  align-items: center;
+}
+
+.carYear {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+
+  color: $gray-500;
+}
+
+.titleButtons {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+
+  align-items: center;
+}

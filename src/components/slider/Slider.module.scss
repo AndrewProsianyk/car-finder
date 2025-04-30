@@ -1,0 +1,17 @@
+.sliderWrapper {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+.sliderCard {
+  scroll-snap-align: center;
+  padding: 24px 0px;
+  flex-shrink: 0;
+  background-color: transparent;
+  border-radius: 14px;
+  text-align: center;
+}
+
+// 3 cards = 554px
