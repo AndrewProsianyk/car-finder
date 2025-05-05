@@ -58,7 +58,7 @@ export default function Header() {
             <Link to="/profile" aria-label="User profile">
               <UserIcon />
             </Link>
-            <Button iconLeft={<PlusIcon />}>Sell Car</Button>
+            {/* <Button iconLeft={<PlusIcon />}>Buy Car</Button> */}
           </div>
         </div>
       </Container>

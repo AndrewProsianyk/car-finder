@@ -19,7 +19,7 @@ export default function CarCardGrid() {
   return (
     <section className={styles.carGrid}>
       <div className={styles.bigCard}>
-        <CarCard car={cars[0]} variant={!isMobile && "big"} />
+        <CarCard car={cars[0]} variant={isMobile ? "default-m" : "big"} />
       </div>
       <div className={`${styles.smallCard} ${styles.top}`}>
         <CarCard

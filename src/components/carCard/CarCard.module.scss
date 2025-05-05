@@ -18,7 +18,6 @@
   }
 
   &.default-m {
-    flex-direction: column;
     width: 100%;
 
     & .cardContentWrap {
@@ -27,7 +26,6 @@
     }
   }
   &.default-s {
-    flex-direction: column;
     width: 100%;
     max-width: 306px;
 

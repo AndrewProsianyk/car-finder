@@ -1,5 +1,4 @@
 import CarCard from "../../carCard/CarCard";
-import ChangeGridButton from "../changeGridButton/ChangeGridButton";
 import styles from "./FilteredCarList.module.scss";
 
 export default function FilteredCarList({ cars, isGrid }) {
@@ -18,7 +17,6 @@ export default function FilteredCarList({ cars, isGrid }) {
           car={car}
           variant={isGrid ? "horizontal-l" : "default-s"}
         />
-        // <CarCard key={car.id} car={car} variant="horizontal-l" />
       ))}
     </ul>
   );

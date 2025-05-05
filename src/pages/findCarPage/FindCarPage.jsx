@@ -30,8 +30,6 @@ export default function FindCarPage() {
     setTotalResults(filteredCars.length);
   }, [filteredCars]);
 
-  console.log(filters, "filters");
-
   return (
     <Container>
       <Breadcrumbs />

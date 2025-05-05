@@ -46,10 +46,10 @@ export default function HeroSearchForm() {
       setFilter("bodyTypes", [selectedBodyType.label]);
     }
     if (selectedModel) {
-      setFilter("make", selectedModel);
+      setFilter("model", selectedModel);
     }
     if (selectedLocation) {
-      setFilter("make", selectedLocation);
+      setFilter("location", selectedLocation);
     }
     if (selectedYearFrom) {
       setFilter("yearFrom", selectedYearFrom.value);
