@@ -11,10 +11,17 @@ export default function CarCard({ car, variant = "default-m" }) {
   if (!car) return <div>Loading...</div>;
 
   return (
-    <Link to={`/car/${car.id}`} className={`${styles.card} ${styles[variant]}`}>
+    <Link
+      to={`/car/${car._id}`}
+      className={`${styles.card} ${styles[variant]}`}
+    >
       <div
         className={clsx(styles.cardImage, styles[variant])}
-        style={{ backgroundImage: `url(${car.image})` }}
+        style={{
+          backgroundImage: car.image
+            ? `url(${car.image})`
+            : 'url("/images/defaultCarImage.png")',
+        }}
       >
         <CarTags condition={car.condition} verified={car.verified} />
       </div>
@@ -31,7 +38,7 @@ export default function CarCard({ car, variant = "default-m" }) {
           <FavoriteButton
             variant="smaller"
             isFavorite={car.favorite}
-            onClick={() => toggleFavorite(car.id)}
+            onClick={() => toggleFavorite(car._id)}
           />
         </div>
         <div

@@ -17,7 +17,7 @@ export default function CarCardList({ data }) {
   return (
     <ul className={styles.list}>
       {data.map((item) => (
-        <li key={item.id} style={{ width: "306px" }}>
+        <li key={item._id} style={{ width: "306px" }}>
           <CarCard car={item} />
         </li>
       ))}

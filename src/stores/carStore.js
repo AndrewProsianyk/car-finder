@@ -1,5 +1,6 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
+import { BACKEND_URL } from "../constants";
 
 export const useCarStore = create(
   persist(
@@ -12,23 +13,15 @@ export const useCarStore = create(
         set({ loading: true, error: null });
 
         try {
-          const response = await fetch("/carsData.json");
+          const response = await fetch(`${BACKEND_URL}/api/cars`);
           if (!response.ok) {
             throw new Error("Network response was not ok");
           }
 
           const newData = await response.json();
-          const existingCars = get().cars;
-
-          const mergedData = newData.map((newCar) => {
-            const existing = existingCars.find((c) => c.id === newCar.id);
-            return existing
-              ? { ...newCar, favorite: existing.favorite ?? false }
-              : { ...newCar, favorite: false };
-          });
 
           set({
-            cars: mergedData,
+            cars: newData,
             loading: false,
           });
         } catch (err) {
@@ -37,16 +30,37 @@ export const useCarStore = create(
         }
       },
 
-      toggleFavorite: (id) => {
-        const updatedCars = get().cars.map((car) =>
-          car.id === id ? { ...car, favorite: !car.favorite } : car
-        );
+      toggleFavorite: async (id) => {
+        const car = get().cars.find((car) => car._id === id);
+        if (!car) return;
 
-        set({ cars: updatedCars });
+        const newFavorite = !car.favorite;
+
+        try {
+          const response = await fetch(
+            `${BACKEND_URL}/api/cars/${id}/favorite`,
+            {
+              method: "PATCH",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ favorite: newFavorite }),
+            }
+          );
+          if (!response.ok) throw new Error("Network error");
+          const updatedCar = await response.json();
+
+          // Оновлюємо авто у локальному масиві
+          const updatedCars = get().cars.map((car) =>
+            car._id === id ? updatedCar : car
+          );
+          set({ cars: updatedCars });
+        } catch (err) {
+          set({ error: err.message });
+          console.error(err);
+        }
       },
 
       getCarById: (id) => {
-        return get().cars.find((car) => car.id === Number(id));
+        return get().cars.find((car) => car._id === id);
       },
     }),
     {
@@ -63,4 +77,4 @@ export const useToggleFavorite = () =>
   useCarStore((state) => state.toggleFavorite);
 export const useGetCarById = () => useCarStore((state) => state.getCarById);
 export const useChosenCar = (id) =>
-  useCarStore((state) => state.cars.find((car) => car.id === Number(id)));
+  useCarStore((state) => state.cars.find((car) => car._id === id));

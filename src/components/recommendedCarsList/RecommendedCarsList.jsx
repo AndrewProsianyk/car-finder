@@ -21,14 +21,14 @@ export default function RecommendedCarsList() {
   useEffect(() => {
     if (cars.length && recommendedIds.length === 0) {
       const shuffled = [...cars].sort(() => 0.5 - Math.random());
-      const ids = shuffled.slice(0, 4).map((car) => car.id);
+      const ids = shuffled.slice(0, 4).map((car) => car._id);
       setRecommendedIds(ids);
     }
   }, [cars]);
 
   const recommendedCars = useMemo(() => {
     return recommendedIds
-      .map((id) => cars.find((car) => car.id === id))
+      .map((id) => cars.find((car) => car._id === id))
       .filter(Boolean); // На випадок якщо раптом якесь авто зникне
   }, [recommendedIds, cars]);
   // const cars = useCarStore((state) => state.cars);

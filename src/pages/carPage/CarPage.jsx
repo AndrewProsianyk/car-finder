@@ -51,7 +51,7 @@ export default function CarPage() {
           <ShareButton />
           <FavoriteButton
             isFavorite={car.favorite}
-            onClick={() => toggleFavorite(car.id)}
+            onClick={() => toggleFavorite(car._id)}
           />
         </div>
       </div>

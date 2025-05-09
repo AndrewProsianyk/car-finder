@@ -27,7 +27,7 @@ export default function CarInfoBlock({ car }) {
       <div className={styles.line}></div>
       <AdditionalInfo
         published={car.date}
-        adNumber={car.id}
+        adNumber={car._id}
         views={car.views}
       />
     </div>
