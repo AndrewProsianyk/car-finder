@@ -14,6 +14,7 @@ import {
 } from "../../stores/carStore";
 import { useEffect } from "react";
 import CarInfoBlock from "../../components/carInfoBlock/CarInfoBlock";
+import GoToTopButton from "../../components/findCarPage/goToTopButton/GoToTopButton";
 
 export default function CarPage() {
   const { id } = useParams();
@@ -60,6 +61,7 @@ export default function CarPage() {
         <SideInfoBlock car={car} />
       </div>
       <RecommendedCarsList />
+      <GoToTopButton />
     </Container>
   );
 }

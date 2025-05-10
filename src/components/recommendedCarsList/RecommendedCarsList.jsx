@@ -29,43 +29,8 @@ export default function RecommendedCarsList() {
   const recommendedCars = useMemo(() => {
     return recommendedIds
       .map((id) => cars.find((car) => car._id === id))
-      .filter(Boolean); // На випадок якщо раптом якесь авто зникне
+      .filter(Boolean);
   }, [recommendedIds, cars]);
-  // const cars = useCarStore((state) => state.cars);
-  // const fetchCars = useCarStore((state) => state.fetchCars);
-
-  // const [randomCars, setRandomCars] = useState([]);
-
-  // useEffect(() => {
-  //   const loadData = async () => {
-  //     if (cars.length === 0) {
-  //       await fetchCars();
-  //     }
-  //   };
-  //   loadData();
-  // }, []);
-
-  // useEffect(() => {
-  //   if (cars.length && randomCars.length === 0) {
-  //     const shuffled = [...cars].sort(() => 0.5 - Math.random());
-  //     setRandomCars(shuffled.slice(0, 4));
-  //   }
-  // }, [cars]);
-  // -------------------
-  // const cars = useCarStore((state) => state.cars);
-  // const fetchCars = useCarStore((state) => state.fetchCars);
-
-  // useEffect(() => {
-  //   if (cars.length === 0) {
-  //     fetchCars();
-  //   }
-  // }, []);
-
-  // const randomCars = useMemo(() => {
-  //   if (!cars.length) return [];
-  //   const shuffled = [...cars].sort(() => 0.5 - Math.random());
-  //   return shuffled.slice(0, 4);
-  // }, [cars]);
 
   return (
     <PageSection

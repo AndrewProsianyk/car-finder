@@ -142,7 +142,7 @@ export default function HeroSearchForm() {
           >
             Search
           </Button>
-          <Link className={styles.formLink} to="/search">
+          <Link className={styles.formLink} to="/find">
             Advanced search <ArrowRight />
           </Link>
         </div>
