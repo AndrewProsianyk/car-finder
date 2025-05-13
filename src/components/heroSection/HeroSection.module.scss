@@ -9,13 +9,17 @@
       rgba(61, 122, 129, 0.5),
       rgba(61, 122, 129, 0.5)
     ),
-    url(../../assets/images/car-hero-bg.png);
-  // background-image: url(../../assets/images/car-hero-bg.png);
+    url(/images/car-hero-bg.png);
   background-repeat: no-repeat;
   background-size: 350px auto;
   background-position: right bottom -65px;
 
   @media (min-width: 768px) {
+    padding-top: 80px;
+    padding-bottom: 170px;
+    background-size: auto;
+  }
+  @media (min-width: 1060px) {
     padding-top: 170px;
     padding-bottom: 170px;
     background-size: auto;
@@ -27,8 +31,14 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
+  justify-content: center;
+  align-items: center;
 
   @media (min-width: 768px) {
+    gap: 20px;
+    text-align: start;
+  }
+  @media (min-width: 1060px) {
     flex-direction: row-reverse;
     gap: 64px;
     text-align: start;
@@ -39,6 +49,10 @@
   padding-bottom: 0;
 
   @media (min-width: 768px) {
+    padding-top: 22px;
+    padding-bottom: 50px;
+  }
+  @media (min-width: 1060px) {
     padding-top: 52px;
     padding-bottom: 100px;
   }
@@ -54,6 +68,10 @@
   margin-bottom: 20px;
 
   @media (min-width: 768px) {
+    font-size: 56px;
+    line-height: 68px;
+  }
+  @media (min-width: 1060px) {
     text-align: start;
     font-size: 56px;
     line-height: 68px;

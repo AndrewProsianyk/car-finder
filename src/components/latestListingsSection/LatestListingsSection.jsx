@@ -8,7 +8,7 @@ import { useCars } from "../../stores/carStore";
 
 export default function LatestListingsSection() {
   const [selectedPill, setSelectedPill] = useState("all");
-  const isMobile = useCheckScreenWidth();
+  const { isMobile } = useCheckScreenWidth();
 
   const cars = useCars();
 

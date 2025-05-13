@@ -2,12 +2,15 @@
 
 .sellerCard {
   width: 100%;
-  padding: 32px;
+  padding: 12px 4px;
   background-color: $gray-50;
   border-radius: 8px;
 
   margin-top: 24px;
-  margin-bottom: 24px;
+
+  @media (min-width: 768px) {
+    padding: 32px;
+  }
 }
 
 .sellerPhoto {

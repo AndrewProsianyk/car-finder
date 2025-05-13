@@ -1,33 +1,10 @@
 import styles from "./Footer.module.scss";
-
 import Container from "../container/Container";
-import { featuresIcons } from "../../assets/icons/features/featuresIcons";
-import FeaturesList from "../featuresList/FeaturesList";
 import FooterLinksList from "../footerLinksList/FooterLinksList";
-import StoreButtons from "../storeButtons/StoreButtons";
 import FooterAppLinks from "../footerAppLinks/FooterAppLinks";
 import SocialMediaLinks from "../socialMediaLinks/SocialMediaLinks";
 import Copyright from "../copyright/Copyright";
 import useCheckScreenWidth from "../../hooks/useCheckScreenWidth";
-
-const featuresData = [
-  {
-    icon: <featuresIcons.CopyIcon color="#E0E5EB" />,
-    text: "Over 1 million listings",
-  },
-  {
-    icon: <featuresIcons.DocumentSearchIcon color="#E0E5EB" />,
-    text: "Personalized search",
-  },
-  {
-    icon: <featuresIcons.CarIcon color="#E0E5EB" />,
-    text: "Online car appraisal",
-  },
-  {
-    icon: <featuresIcons.LightBulbIcon color="#E0E5EB" />,
-    text: "Non-stop innovation",
-  },
-];
 
 const footerLinksListsData = [
   {
@@ -108,20 +85,12 @@ const footerLinksListsData = [
 ];
 
 export default function Footer() {
-  const isMobile = useCheckScreenWidth();
+  const { isMobile } = useCheckScreenWidth();
 
   return (
     <footer className={styles.footer}>
       <Container>
-        <FeaturesList data={featuresData} variant="row" />
-        <div className={styles.line}></div>
-        <div
-          style={
-            !isMobile
-              ? { display: "flex", justifyContent: "space-between" }
-              : {}
-          }
-        >
+        <div className={styles.footerContentWrap}>
           <FooterLinksList data={footerLinksListsData} />
           <FooterAppLinks />
         </div>

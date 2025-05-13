@@ -10,12 +10,20 @@
 .contentWrap {
   display: flex;
   flex-direction: column;
+  position: relative;
   padding: 48px 16px;
   background-color: $gray-50;
-  //   gap: 24px;
+
   justify-content: space-between;
 
-  @media (min-width: 768px) {
+  @media (min-width: 768px) and (max-width: 1159px) {
+    padding: 73px 46px;
+    flex-direction: row;
+    margin-bottom: 0;
+    gap: 30px;
+  }
+
+  @media (min-width: 1160px) {
     padding: 73px 96px;
     flex-direction: row;
     margin-bottom: 0;

@@ -3,7 +3,7 @@ import styles from "./FeaturesList.module.scss";
 import useCheckScreenWidth from "../../hooks/useCheckScreenWidth";
 
 export default function FeaturesList({ data, variant = null }) {
-  const isMobile = useCheckScreenWidth();
+  const { isMobile } = useCheckScreenWidth();
   return (
     <ul
       className={clsx(styles.list, {

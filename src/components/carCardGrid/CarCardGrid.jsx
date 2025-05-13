@@ -7,9 +7,20 @@ import styles from "./CarCardGrid.module.scss";
 import Loader from "../loader/Loader";
 
 export default function CarCardGrid() {
-  const isMobile = useCheckScreenWidth();
+  const { isMobile, width } = useCheckScreenWidth();
 
   const { cars, fetchCars, loading } = useCarStore();
+
+  const bigCardVariant = () => {
+    let variant;
+    if (isMobile) {
+      variant = "default-m";
+    } else if (!isMobile && width < 1230) {
+      variant = "horizontal-m";
+    } else variant = "big";
+
+    return variant;
+  };
 
   useEffect(() => {
     fetchCars();
@@ -24,18 +35,18 @@ export default function CarCardGrid() {
       ) : (
         <>
           <div className={styles.bigCard}>
-            <CarCard car={cars[0]} variant={isMobile ? "default-m" : "big"} />
+            <CarCard car={cars[5]} variant={bigCardVariant()} />
           </div>
           <div className={`${styles.smallCard} ${styles.top}`}>
             <CarCard
-              car={cars[1]}
-              variant={isMobile ? "default-m" : "horizontal-m"}
+              car={cars[16]}
+              variant={isMobile && width < 1230 ? "default-m" : "horizontal-m"}
             />
           </div>
           <div className={`${styles.smallCard} ${styles.bottom}`}>
             <CarCard
-              car={cars[2]}
-              variant={isMobile ? "default-m" : "horizontal-m"}
+              car={cars[37]}
+              variant={isMobile && width < 1230 ? "default-m" : "horizontal-m"}
             />
           </div>
         </>

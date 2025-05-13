@@ -2,8 +2,12 @@
 
 .imageWrap {
   width: 100%;
-  height: 506px;
+  height: auto;
   object-fit: cover;
+
+  @media (min-width: 768px) {
+    height: 506px;
+  }
 }
 
 .carInfoBlock {

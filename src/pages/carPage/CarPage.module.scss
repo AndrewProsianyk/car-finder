@@ -30,3 +30,14 @@
 
   align-items: center;
 }
+
+.contentWrap {
+  display: flex;
+
+  flex-direction: column-reverse;
+  gap: 24px;
+
+  @media (min-width: 1300px) {
+    flex-direction: row;
+  }
+}

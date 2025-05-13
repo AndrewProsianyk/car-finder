@@ -1,6 +1,7 @@
 import AccessoriesSection from "../components/accessoriesSection/AccessoriesSection";
 import BodyTypesSection from "../components/bodyTypesSection/BodyTypesSection";
 import FeaturesSection from "../components/featuresSection/FeaturesSection";
+import GoToTopButton from "../components/findCarPage/goToTopButton/GoToTopButton";
 import HeroSection from "../components/heroSection/HeroSection";
 import LatestListingsSection from "../components/latestListingsSection/LatestListingsSection";
 import MakesLogoSection from "../components/makesLogoSection/MakesLogoSection";
@@ -18,6 +19,7 @@ export default function HomePage() {
       <FeaturesSection />
       <LatestListingsSection />
       <AccessoriesSection />
+      <GoToTopButton />
     </>
   );
 }

@@ -1,8 +1,5 @@
-import PlusIcon from "../../assets/icons/PlusIcon";
 import UserIcon from "../../assets/icons/UserIcon";
 import SunIcon from "../../assets/icons/SunIcon";
-
-import Button from "../button/Button";
 import Container from "../container/Container";
 
 import styles from "./Header.module.scss";
@@ -19,8 +16,8 @@ const navItems = [
   },
 
   {
-    label: "Online appraisal",
-    href: "/appraisal",
+    label: "Favorite",
+    href: "/favorite",
   },
   {
     label: "Dealers",
@@ -33,7 +30,7 @@ const navItems = [
 ];
 
 export default function Header() {
-  const isMobile = useCheckScreenWidth();
+  const { isMobile } = useCheckScreenWidth();
 
   return (
     <header className={styles.header}>
@@ -58,7 +55,6 @@ export default function Header() {
             <Link to="/profile" aria-label="User profile">
               <UserIcon />
             </Link>
-            {/* <Button iconLeft={<PlusIcon />}>Buy Car</Button> */}
           </div>
         </div>
       </Container>

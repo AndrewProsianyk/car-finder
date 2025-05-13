@@ -5,7 +5,7 @@ import useCheckScreenWidth from "../../hooks/useCheckScreenWidth";
 import Slider from "../slider/Slider";
 
 export default function MakesLogoSection() {
-  const isMobile = useCheckScreenWidth();
+  const { isMobile } = useCheckScreenWidth();
   return (
     <section className={styles.makesSection}>
       <Container>

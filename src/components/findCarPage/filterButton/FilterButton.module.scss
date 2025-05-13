@@ -1,0 +1,13 @@
+@use "../../../styles/variables" as *;
+
+.filterBtn {
+  display: inline-block;
+  width: 40px;
+  border: none;
+  background-color: transparent;
+
+  & > span {
+    font-size: 14px;
+    color: $gray-600;
+  }
+}

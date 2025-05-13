@@ -8,8 +8,9 @@
   border: 1px solid $gray-200;
   overflow: hidden;
   color: $gray-500;
+  background-color: #fff;
 
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: none;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 
   &:hover {
@@ -35,9 +36,14 @@
     }
   }
 
+  .cardContentWrap {
+    text-align: start;
+  }
+
   &.horizontal-m {
     flex-direction: row;
     width: 100%;
+    max-width: 746px;
 
     & .cardContentWrap {
       padding: 32px 24px;
@@ -49,6 +55,7 @@
   &.horizontal-l {
     flex-direction: row;
     width: 100%;
+    max-width: 966px;
 
     & .cardContentWrap {
       padding: 32px 24px;
@@ -68,6 +75,13 @@
   }
 }
 
+.horizontal-m {
+  & > .cardImage {
+    width: 312px;
+    height: 234px;
+  }
+}
+
 .cardImage {
   width: 100%;
   height: 204px;
@@ -77,10 +91,6 @@
   background-position: center;
   background-repeat: no-repeat;
 
-  &.horizontal-m {
-    width: 312px;
-    height: 234px;
-  }
   &.horizontal-l {
     width: 416px;
     height: 290px;

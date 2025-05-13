@@ -17,7 +17,7 @@ export default function SideInfoBlock({ car }) {
         transmission={car.transmission}
       />
       <SellerCard />
-      <SubscriptionBlock />
+      {/* <SubscriptionBlock /> */}
     </div>
   );
 }

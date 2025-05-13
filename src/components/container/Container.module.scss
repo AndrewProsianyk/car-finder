@@ -3,7 +3,8 @@
   margin-right: auto;
   padding-left: 16px;
   padding-right: 16px;
-  width: 375px;
+  width: 100%;
+  max-width: 375px;
 
   &.noPadding {
     padding-left: 0;
@@ -11,6 +12,6 @@
   }
 
   @media (min-width: 768px) {
-    width: 1328px;
+    max-width: 1328px;
   }
 }

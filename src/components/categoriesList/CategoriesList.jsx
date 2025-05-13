@@ -4,7 +4,7 @@ import Slider from "../slider/Slider";
 import styles from "./CategoriesList.module.scss";
 
 export default function CategoriesList({ data }) {
-  const isMobile = useCheckScreenWidth();
+  const { isMobile, width } = useCheckScreenWidth();
 
   if (isMobile) {
     return (
@@ -13,6 +13,15 @@ export default function CategoriesList({ data }) {
       </Slider>
     );
   }
+
+  if (!isMobile && width < 1160) {
+    return (
+      <Slider data={data} cardWidth="212px">
+        {(item) => <CategoryCard img={item.img} name={item.name} />}
+      </Slider>
+    );
+  }
+
   return (
     <ul className={styles.list}>
       {data?.map((item, idx) => {

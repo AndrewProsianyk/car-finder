@@ -24,9 +24,9 @@ const featuresData = [
 ];
 
 export default function FeaturesSection() {
-  const isMobile = useCheckScreenWidth();
+  const { width } = useCheckScreenWidth();
 
-  if (isMobile) return;
+  if (width < 1160) return;
 
   return (
     <PageSection title="What sets Finder apart?">

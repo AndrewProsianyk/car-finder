@@ -56,7 +56,7 @@ export default function CarPage() {
           />
         </div>
       </div>
-      <div style={{ display: "flex", flexDirection: "row", gap: "24px" }}>
+      <div className={styles.contentWrap}>
         <CarInfoBlock car={car} />
         <SideInfoBlock car={car} />
       </div>

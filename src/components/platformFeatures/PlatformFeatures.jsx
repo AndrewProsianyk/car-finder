@@ -19,12 +19,18 @@ export default function PlatformFeatures() {
     <CarPageSection>
       <ul className={styles.featuresList}>
         {platformFeaturesList.map((item, idx) => (
-          <li className={styles.listItem} key={idx}>
-            <span>{item.icon}</span>
-            <span>{item.feature}</span>
-          </li>
+          <FeatureCard item={item} key={idx} />
         ))}
       </ul>
     </CarPageSection>
+  );
+}
+
+function FeatureCard({ item }) {
+  return (
+    <li className={styles.listItem}>
+      <span>{item.icon}</span>
+      <span>{item.feature}</span>
+    </li>
   );
 }

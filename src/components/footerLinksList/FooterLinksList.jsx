@@ -4,7 +4,7 @@ import Accordeon from "../accordeon/Accordeon";
 import styles from "./FooterLinksList.module.scss";
 
 export default function FooterLinksList({ data }) {
-  const isMobile = useCheckScreenWidth();
+  const { isMobile } = useCheckScreenWidth();
 
   if (isMobile) {
     return (

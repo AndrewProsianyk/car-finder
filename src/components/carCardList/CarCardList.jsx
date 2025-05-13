@@ -5,9 +5,16 @@ import Slider from "../slider/Slider";
 import CarCard from "../carCard/CarCard";
 
 export default function CarCardList({ data }) {
-  const isMobile = useCheckScreenWidth();
+  const { isMobile, width } = useCheckScreenWidth();
 
   if (isMobile) {
+    return (
+      <Slider data={data} cardWidth="343px">
+        {(item) => <CarCard car={item} />}
+      </Slider>
+    );
+  }
+  if (!isMobile && width < 1160) {
     return (
       <Slider data={data} cardWidth="343px">
         {(item) => <CarCard car={item} />}
