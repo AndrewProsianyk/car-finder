@@ -78,7 +78,7 @@ export default function FindCarPage() {
               justifyContent: "space-between",
             }}
           >
-            {width < 1000 && (
+            {width <= 1000 && (
               <FilterButton onClick={() => setIsFiltersOpen(true)} />
             )}
             {!isMobile && (

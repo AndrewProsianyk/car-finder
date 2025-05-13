@@ -8,11 +8,13 @@ import TransmissionFilter from "../transmissionFilter/TransmissionFilter";
 import YearFilter from "../yearFilter/YearFilter";
 import styles from "./CarFilterBlock.module.scss";
 import CloseFiltersButton from "../closeFiltersButton/CloseFiltersButton";
+import useCheckScreenWidth from "../../../hooks/useCheckScreenWidth";
 
 export default function CarFilterBlock({
   onClose = null,
   variant = "default",
 }) {
+  const { width } = useCheckScreenWidth();
   return (
     <div className={clsx(styles.filterBlockWrap, styles[variant])}>
       <LocationFilter />
@@ -22,7 +24,7 @@ export default function CarFilterBlock({
       <RangeSlider />
       <FuelTypeFilter />
       <TransmissionFilter />
-      <CloseFiltersButton onClose={onClose} />
+      {width <= 1000 && <CloseFiltersButton onClose={onClose} />}
     </div>
   );
 }

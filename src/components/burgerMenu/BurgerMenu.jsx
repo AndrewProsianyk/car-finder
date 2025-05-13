@@ -8,14 +8,18 @@ export default function BurgerMenu({ navItems }) {
 
   return (
     <div style={{ position: "relative" }}>
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className={styles.burgerToggleBtn}
-        aria-label="Open or close burger menu"
-      >
-        <BurgerIcon />
-        <span className={styles.burgerLogo}>Finder</span>
-      </button>
+      <div style={{ display: "flex", flexDirection: "row", gap: "10px" }}>
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className={styles.burgerToggleBtn}
+          aria-label="Open or close burger menu"
+        >
+          <BurgerIcon />
+        </button>
+        <a href="/" className={styles.burgerLogo}>
+          Finder
+        </a>
+      </div>
       {isOpen && (
         <div className={styles.navMenu}>
           <HeaderNavigation navItems={navItems} variant={"mobile"} />
