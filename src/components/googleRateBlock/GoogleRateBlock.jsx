@@ -19,14 +19,7 @@ export default function GoogleRateBlock() {
       {rateItems.map((item, idx) => {
         return (
           <div className={styles.rateBlock} key={idx}>
-            <span
-              style={{
-                display: "flex",
-                alignItems: "center",
-              }}
-            >
-              {item.icon}
-            </span>
+            <span className={styles.iconWrap}>{item.icon}</span>
             <span className={styles.rateText}>{item.text}</span>
           </div>
         );

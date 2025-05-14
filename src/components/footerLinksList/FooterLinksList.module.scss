@@ -1,5 +1,14 @@
 @use "../../styles/variables" as *;
 
+.footerLinks {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  max-width: 740px;
+  margin-bottom: 64px;
+}
+
 .list {
   display: flex;
   flex-direction: column;

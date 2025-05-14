@@ -26,14 +26,7 @@ export default function CarCard({ car, variant = "default-m" }) {
         <CarTags condition={car.condition} verified={car.verified} />
       </div>
       <div className={styles.cardContentWrap}>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            marginBottom: "5px",
-          }}
-        >
+        <div className={styles.cardDateFavoriteRow}>
           <span className={styles.date}>{car.date}</span>
           <FavoriteButton
             variant="smaller"
@@ -41,20 +34,13 @@ export default function CarCard({ car, variant = "default-m" }) {
             onClick={() => toggleFavorite(car._id)}
           />
         </div>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "8px",
-            marginBottom: "8px",
-          }}
-        >
+        <div className={styles.cardTitleBlock}>
           <h3 className={styles.title}>{car.title}</h3>
           <span className={styles.year}>({car.year})</span>
         </div>
         <span className={styles.price}>$ {car.price}</span>
         {variant === "horizontal-l" ? (
-          <p style={{ marginTop: "12px" }}>
+          <p className={styles.carDescription}>
             This car lorem ipsum dolor sit amet consectetur adipisicing elit.
             Fugiat optio est incidunt corporis a quasi velit.
           </p>

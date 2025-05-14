@@ -19,16 +19,7 @@ export default function FooterLinksList({ data }) {
   }
 
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        flexDireaction: "row",
-        width: "100%",
-        maxWidth: "740px",
-        marginBottom: "64px",
-      }}
-    >
+    <div className={styles.footerLinks}>
       {data.map((item, idx) => (
         <div key={idx}>
           <h3 className={styles.title}>{item.title}</h3>

@@ -3,7 +3,7 @@
 .sellerCard {
   width: 100%;
   padding: 12px 4px;
-  background-color: $gray-50;
+  background-color: $gray-100;
   border-radius: 8px;
 
   margin-top: 24px;
@@ -11,6 +11,13 @@
   @media (min-width: 768px) {
     padding: 32px;
   }
+}
+
+.basicSellersInfo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
 }
 
 .sellerPhoto {
@@ -38,4 +45,10 @@
   font-size: 12px;
   line-height: 18px;
   color: $gray-500;
+}
+
+.cardButtons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

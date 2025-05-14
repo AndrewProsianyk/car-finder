@@ -30,25 +30,10 @@ export default function Breadcrumbs() {
 
   return (
     <nav style={{ marginTop: "24px", marginBottom: "24px" }}>
-      <ul
-        style={{
-          display: "flex",
-          gap: "8px",
-          alignItems: "center",
-          textAlign: "center",
-        }}
-      >
+      <ul className={styles.navList}>
         <li className={styles.crumb}>
           <Link to="/">Home</Link>
-          <span
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "center",
-              alignItems: "center",
-              marginLeft: "8px",
-            }}
-          >
+          <span className={styles.iconWrap}>
             <ArrowRight color="#333D4C" />
           </span>
         </li>
@@ -60,15 +45,7 @@ export default function Breadcrumbs() {
           ) : (
             <li className={styles.crumb} key={crumb.href}>
               <Link to={crumb.href}>{crumb.label}</Link>
-              <span
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  marginLeft: "8px",
-                }}
-              >
+              <span className={styles.iconWrap}>
                 <ArrowRight color="#333D4C" />
               </span>
             </li>

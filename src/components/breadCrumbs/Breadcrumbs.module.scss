@@ -1,5 +1,12 @@
 @use "../../styles/variables" as *;
 
+.navList {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  text-align: center;
+}
+
 .crumb {
   color: $gray-700;
   font-weight: 500;
@@ -12,4 +19,12 @@
   &.active {
     color: $gray-400;
   }
+}
+
+.iconWrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: 8px;
 }

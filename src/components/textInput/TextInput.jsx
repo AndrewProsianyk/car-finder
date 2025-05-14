@@ -33,6 +33,7 @@ export default function TextInput({
         value={cleanedValue}
         onChange={handleChange}
         placeholder={placeholder}
+        name="textInput"
       />
     </div>
   );

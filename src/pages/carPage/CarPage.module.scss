@@ -1,5 +1,12 @@
 @use "../../styles/variables" as *;
 
+.carTitleSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
 .carTitle {
   color: $gray-900;
   font-weight: 600;

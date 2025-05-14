@@ -30,8 +30,6 @@ export default function InputSelect({
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // console.log(value);
-
   return (
     <div className={styles.wrapper} ref={selectRef}>
       <button
@@ -45,25 +43,8 @@ export default function InputSelect({
         disabled={disabled}
         aria-label="Open options list"
       >
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "center",
-            gap: "10px",
-          }}
-        >
-          {icon && (
-            <span
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-              }}
-            >
-              {icon}
-            </span>
-          )}
+        <div className={styles.selectContent}>
+          {icon && <span className={styles.iconWrap}>{icon}</span>}
           <span className={!value ? styles.placeholder : ""}>
             {value ? value.label : placeholder}
           </span>

@@ -44,7 +44,7 @@ export default function SubscriptionBlock() {
         <label htmlFor="agreeCheckbox" className={styles.agreementLabel}>
           <input
             type="checkbox"
-            name="agree"
+            name="agreeCheckbox"
             id="agreeCheckbox"
             checked={isAgreed}
             onChange={(e) => setIsAgreed(e.target.checked)}

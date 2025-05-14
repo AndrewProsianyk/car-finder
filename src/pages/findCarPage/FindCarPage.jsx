@@ -64,20 +64,8 @@ export default function FindCarPage() {
           />
         )}
         {width > 1000 && <CarFilterBlock />}
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: "24px",
-            width: "100%",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-            }}
-          >
+        <div className={styles.carListWrap}>
+          <div className={styles.toolsWrap}>
             {width <= 1000 && (
               <FilterButton onClick={() => setIsFiltersOpen(true)} />
             )}

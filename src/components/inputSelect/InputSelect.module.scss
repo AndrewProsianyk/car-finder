@@ -43,8 +43,21 @@
   }
 }
 
+.selectContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+}
+
 .placeholder {
   color: $gray-400;
+}
+
+.iconWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .icon {

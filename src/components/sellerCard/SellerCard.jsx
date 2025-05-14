@@ -7,14 +7,7 @@ import styles from "./SellerCard.module.scss";
 export default function SellerCard() {
   return (
     <div className={styles.sellerCard}>
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          gap: "16px",
-          marginBottom: "16px",
-        }}
-      >
+      <div className={styles.basicSellersInfo}>
         <div className={styles.sellerPhoto}>
           <img
             src="/images/avatar.png"
@@ -31,13 +24,7 @@ export default function SellerCard() {
           </div>
         </div>
       </div>
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-        }}
-      >
+      <div className={styles.cardButtons}>
         <PhoneReveal phoneNumber={"+380732215084"} />
         <Button iconLeft={<MailIcon />}>Send email</Button>
       </div>

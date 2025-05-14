@@ -36,14 +36,7 @@ export default function CarPage() {
   return (
     <Container>
       <Breadcrumbs />
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-between",
-          marginBottom: "24px",
-        }}
-      >
+      <div className={styles.carTitleSection}>
         <div className={styles.titleWrap}>
           <h1 className={styles.carTitle}>{car.title}</h1>
           <span className={styles.carYear}>({car.year})</span>
