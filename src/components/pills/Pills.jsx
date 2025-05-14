@@ -27,7 +27,6 @@ export default function Pills({ onChange, selected, variant = "form" }) {
 function Pill({ label, value, onChange, selected, variant }) {
   return (
     <label
-      htmlFor="carType"
       className={clsx(
         styles.pill,
         selected === value && styles.active,
@@ -37,7 +36,6 @@ function Pill({ label, value, onChange, selected, variant }) {
       <input
         type="radio"
         name="carType"
-        id="carType"
         value={value}
         checked={selected === value}
         onChange={() => onChange(value)}

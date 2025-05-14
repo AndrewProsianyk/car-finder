@@ -8,6 +8,7 @@ import NotFoundPage from "./pages/NotFoundPage";
 import CarPage from "./pages/carPage/CarPage";
 import ScrollToTop from "./components/scrollToTop/ScrollToTop";
 import FindCarPage from "./pages/findCarPage/FindCarPage";
+import FavoritePage from "./pages/favoritePage/FavoritePage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/find" element={<FindCarPage />} />
+          <Route path="/favorite" element={<FavoritePage />} />
           <Route path="/car/:id" element={<CarPage />} />
 
           <Route path="*" element={<NotFoundPage />} />
