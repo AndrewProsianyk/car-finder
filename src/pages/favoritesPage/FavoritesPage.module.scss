@@ -1,0 +1,25 @@
+@use "../../styles/variables" as *;
+
+.favoritesPage {
+  padding: 2rem;
+  h1 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: $gray-900;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+}
+.carsList {
+  display: flex;
+  justify-content: center;
+
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.listItem {
+  width: 100%;
+  max-width: 524px;
+}

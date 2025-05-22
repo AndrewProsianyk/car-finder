@@ -59,6 +59,10 @@ export const useCarStore = create(
         }
       },
 
+      getFavorites: () => {
+        return get().cars.filter((car) => car.favorite);
+      },
+
       getCarById: (id) => {
         return get().cars.find((car) => car._id === id);
       },
